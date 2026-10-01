@@ -1,6 +1,6 @@
 import os
 
-from mcp.server import MCPServer
+from mcp.server.mcpserver import MCPServer
 
 
 mcp = MCPServer("Threads MCP")
@@ -15,7 +15,7 @@ def test_connection() -> str:
 @mcp.tool()
 def about() -> str:
     """Show what this MCP server is for."""
-    return "This server will connect ChatGPT to the user's Threads account."
+    return "This server connects ChatGPT to the user's Threads account."
 
 
 if __name__ == "__main__":
@@ -25,4 +25,5 @@ if __name__ == "__main__":
         transport="streamable-http",
         host="0.0.0.0",
         port=port,
+        json_response=True,
     )
