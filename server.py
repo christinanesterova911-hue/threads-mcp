@@ -136,7 +136,7 @@ async def auth_start(request: Request):
         + urllib.parse.urlencode(params)
     )
 
-   return {"oauth_url": url}
+    return {"oauth_url": url}
 
 
 @mcp.custom_route("/auth/callback", methods=["GET"])
