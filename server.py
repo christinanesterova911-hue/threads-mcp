@@ -132,7 +132,7 @@ async def auth_start(request: Request):
     }
 
     url = (
-        "https://threads.com/oauth/authorize?"
+        "https://threads.net/oauth/authorize?"
         + urllib.parse.urlencode(params)
     )
 
